@@ -1,4 +1,5 @@
-package com.example.demo.controller;
+
+LocationController.java
 
 import java.util.List;
 
@@ -12,15 +13,15 @@ import com.example.demo.entity.LocationEntity;
 import com.example.demo.service.LocationService;
 
 @RestController
-public class LocationController {
+public class LocationController{
     @Autowired
-    LocationService locationService;
-    @PostMapping("/addlocation")
+    LocationService locationservice;
+    @PostMapping("/addstudent")
     public LocationEntity add(@RequestBody LocationEntity le){
-        return locationService.createLocation(le);
+        return locationservice.createlocation(le);
     }
-    @GetMapping("showlocation")
+    @GetMapping ("/showlocation")
     public List<LocationEntity> show(){
-        return locationService.getall();
+        return locationservice.getalllocation();
     }
 }
