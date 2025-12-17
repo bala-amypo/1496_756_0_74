@@ -1,14 +1,24 @@
+import java.util.List;
 
-package demo.controller;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class LocationController {
+import com.example.demo.entity.LocationEntity;
+import com.example.demo.service.LocationService;
 
-    @GetMapping("/location")
-    public String getLocation() {
-        return "Location works";
+@RestController
+public class LocationController{
+    @Autowired
+    LocationService locationservice;
+    @PostMapping("/addstudent")
+    public LocationEntity add(@RequestBody LocationEntity le){
+        return locationservice.createlocation(le);
+    }
+    @GetMapping ("/showlocation")
+    public List<LocationEntity> show(){
+        return locationservice.getalllocation();
     }
 }
