@@ -1,3 +1,4 @@
+
 package com.example.demo.controller;
 
 import java.util.List;
@@ -19,11 +20,11 @@ public class LocationController {
 
     @PostMapping("/addlocation")
     public LocationEntity add(@RequestBody LocationEntity le) {
-        return locationService.createlocation(le); // matches service
+        return locationService.createLocation(le);
     }
 
     @GetMapping("/showlocation")
     public List<LocationEntity> show() {
-        return locationService.getAllLocations(); // matches service
+        return locationService.getAllLocations();
     }
 }
