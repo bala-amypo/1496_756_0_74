@@ -57,19 +57,3 @@ public class LocationEntity {
         this.longitude = longitude;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

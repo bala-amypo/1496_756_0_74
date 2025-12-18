@@ -1,3 +1,4 @@
+
 package com.example.demo.service;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class LocationServiceImpl implements LocationService {
     }
 
     @Override
-    public List<LocationEntity> getalllocation() {
+    public List<LocationEntity> getAllLocations() {
         return locationRepository.findAll();
     }
 }
