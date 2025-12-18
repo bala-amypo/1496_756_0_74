@@ -8,5 +8,5 @@ public interface LocationService {
 
     LocationEntity createlocation(LocationEntity le);
 
-    List<LocationEntity> getalllocation();
+    List<LocationEntity> getalllocations();
 }
